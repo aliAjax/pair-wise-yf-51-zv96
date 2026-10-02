@@ -36,6 +36,7 @@ header p, header small { color: #697880; margin: 0; }
 .cue { display: grid; grid-template-columns: 78px minmax(160px, 1fr) 70px 55px 55px; gap: 9px; align-items: center; padding: 11px; border: 1px solid #dde5e7; border-left: 4px solid #aab5b8; border-radius: 9px; background: #fbfdfd; cursor: pointer; }
 .cue.selected { border-color: #168f7f; background: #f1fbf8; }
 .cue.待审 { border-left-color: #e4a11b; }
+.cue.待复核 { border-left-color: #8a5cf6; background: #f7f4ff; }
 .cue.已通过 { border-left-color: #168f7f; }
 .cue.退回 { border-left-color: #d94c4c; background: #fff7f7; }
 .cue time { font-weight: 800; color: #40535a; }
@@ -44,6 +45,7 @@ header p, header small { color: #697880; margin: 0; }
 .cue small { color: #859198; margin-top: 3px; }
 .chip { display: inline-block; width: max-content; border-radius: 99px; background: #e8eef0; padding: 4px 8px; font-size: 12px; white-space: nowrap; }
 .chip.待审 { background: #fff1d8; color: #996515; }
+.chip.待复核 { background: #ece6fd; color: #5b34c4; }
 .chip.已通过 { background: #def5ee; color: #0f735f; }
 .chip.退回 { background: #fde5e5; color: #a43838; }
 .right-stack { display: grid; gap: 18px; }
@@ -56,7 +58,17 @@ header p, header small { color: #697880; margin: 0; }
 .variant-filled-primary { background: #146f68; color: #fff; border-color: #146f68; }
 .variant-filled-success { background: #168f7f; color: #fff; border-color: #168f7f; }
 .variant-filled-error { background: #c64d4d; color: #fff; border-color: #c64d4d; }
-.term { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e4eaeb; padding: 9px 0; }
+.term { display: flex; justify-content: space-between; align-items: center; gap: 10px; border-bottom: 1px solid #e4eaeb; padding: 9px 0; }
+.term-edit { display: grid; gap: 4px; min-width: 0; flex: 1; }
+.term-edit .input { padding: 6px 8px; }
+.rechecks { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.recheck-box { border: 1px solid #cabdf3; background: #f6f2ff; border-radius: 9px; padding: 10px; margin-bottom: 12px; color: #4c2fa8; font-size: 13px; }
+.recheck-box ul { margin: 6px 0; padding-left: 18px; }
+.recheck-box small { color: #6c5fb0; }
+.offline-box { min-height: 110px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; }
+.merge-report { margin: 8px 0 0; color: #146f68; font-size: 12px; }
+.reeval { margin: 6px 0; padding-left: 16px; color: #5b34c4; font-size: 12px; }
+.reeval li { cursor: help; }
 .conflict { border: 1px solid #f0c98a; background: #fff9ef; border-radius: 9px; padding: 10px; margin-bottom: 8px; }
 .conflict p { margin: 6px 0; color: #6f685a; }
 .bottom-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 18px; margin-top: 18px; }
