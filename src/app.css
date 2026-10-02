@@ -38,14 +38,22 @@ header p, header small { color: #697880; margin: 0; }
 .cue.待审 { border-left-color: #e4a11b; }
 .cue.已通过 { border-left-color: #168f7f; }
 .cue.退回 { border-left-color: #d94c4c; background: #fff7f7; }
+.cue.待重审 { border-left-color: #d97706; background: #fffaf0; }
 .cue time { font-weight: 800; color: #40535a; }
 .cue time small, .cue p, .cue b { display: block; }
 .cue p { color: #63737a; margin: 5px 0 0; }
 .cue small { color: #859198; margin-top: 3px; }
+.term-flags { color: #b45309 !important; font-weight: 600; }
+.empty-hint { color: #859198; font-size: 13px; }
 .chip { display: inline-block; width: max-content; border-radius: 99px; background: #e8eef0; padding: 4px 8px; font-size: 12px; white-space: nowrap; }
 .chip.待审 { background: #fff1d8; color: #996515; }
 .chip.已通过 { background: #def5ee; color: #0f735f; }
 .chip.退回 { background: #fde5e5; color: #a43838; }
+.chip.待重审 { background: #fdecc8; color: #92600a; }
+.metric-warn { color: #b45309 !important; }
+.head-actions { display: flex; align-items: center; gap: 10px; }
+.filter { display: flex; align-items: center; gap: 5px; font-size: 13px; color: #52636a; cursor: pointer; }
+.term-notice { background: #fff8e6; border: 1px solid #f0d98a; border-radius: 8px; padding: 8px 10px; margin-bottom: 10px; color: #7a5a1e; font-size: 13px; font-weight: 600; }
 .right-stack { display: grid; gap: 18px; }
 .label { display: grid; gap: 6px; color: #66767d; font-size: 13px; margin-bottom: 10px; }
 .input, .textarea { width: 100%; border: 1px solid #cdd9dc; border-radius: 8px; padding: 9px 10px; background: #fbfdfd; color: #17212b; }
@@ -56,7 +64,17 @@ header p, header small { color: #697880; margin: 0; }
 .variant-filled-primary { background: #146f68; color: #fff; border-color: #146f68; }
 .variant-filled-success { background: #168f7f; color: #fff; border-color: #168f7f; }
 .variant-filled-error { background: #c64d4d; color: #fff; border-color: #c64d4d; }
-.term { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e4eaeb; padding: 9px 0; }
+.term { display: flex; justify-content: space-between; align-items: center; gap: 8px; border-bottom: 1px solid #e4eaeb; padding: 9px 0; }
+.term-row { display: flex; align-items: center; gap: 6px; min-width: 0; flex: 1; }
+.term-arrow { color: #859198; }
+.term-target { width: 110px; padding: 4px 6px; flex: none; }
+.term-actions { display: flex; gap: 5px; flex: none; }
+.merge-input { min-height: 110px; margin-top: 8px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+.merge-error { color: #a43838; font-size: 13px; margin: 8px 0 0; }
+.merge-ok { color: #0f735f; font-size: 13px; margin: 8px 0 0; }
+.reeval-head { margin: 8px 0 0; color: #92600a; font-size: 13px; font-weight: 700; }
+.reeval-list { margin: 4px 0 0; padding-left: 18px; color: #7a5a1e; font-size: 12px; display: grid; gap: 2px; }
+.reeval-none { color: #859198; }
 .conflict { border: 1px solid #f0c98a; background: #fff9ef; border-radius: 9px; padding: 10px; margin-bottom: 8px; }
 .conflict p { margin: 6px 0; color: #6f685a; }
 .bottom-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 18px; margin-top: 18px; }
